@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Commend Event</title>
+</head>
+<body>
+    <div id="comment-location">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fugiat possimus totam officiis cupiditate iure enim beatae voluptatum amet dolor, error omnis, harum accusamus odio dignissimos, similique asperiores quisquam nostrum. Amet ducimus dolores, eos deleniti consequuntur dolorum magnam corporis dignissimos pariatur ea possimus ex cupiditate perspiciatis, vel recusandae veritatis in.</p>
+        <p>Quos suscipit, natus officia deleniti ex, culpa nisi error molestias necessitatibus consequuntur ad accusantium dicta ut vero iure velit voluptatum voluptatem nobis deserunt itaque! Cumque sed rem animi vero voluptates doloremque sequi officiis, dolore ex ut delectus! Non, qui amet! Harum doloremque, nam unde dolores labore quos minus modi ex?</p>
+        <p>Debitis provident cum cupiditate repellendus ipsa, voluptatibus sit dignissimos molestiae molestias laudantium impedit rerum magni cumque. Consectetur, velit omnis similique veniam hic, sed sint maxime dicta obcaecati sit harum, consequuntur praesentium! Ipsum qui, modi consequatur, numquam ullam magni velit voluptates illum quam similique ratione saepe ea hic accusamus eos sequi!</p>
+    
+    </div>
+    <div>
+        <textarea name="" id="comment-text" cols="60" rows="5"></textarea>
+        <br>
+        <button id="btn">comment</button>
+    </div>
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            const inputText = document.getElementById('comment-text')
+            const textData =inputText.value;
+
+            const commentArea = document.getElementById('comment-location')
+            const p = document.createElement('p')
+            p.innerText = textData
+            commentArea.appendChild(p)
+            inputText.value = ''
+            
+           
+        })
+    </script>
+    
+</body>
+</html>

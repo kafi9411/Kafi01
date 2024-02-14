@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Event</title>
+</head>
+<body>
+    <h1>Introduction</h1>
+    <h3 id="pepole">Hi, Student ! How are you?</h3>
+    <h1>Comment</h1>
+    <p id="upde">Name</p>
+    <input id="text-1" type="text">
+    <button id="up-btn">update</button>
+    <br><br>
+    <button onclick="Intro()">Next</button>
+    <br><br>
+    <button id="next-f">more</button>
+    <script>
+        function Intro(){
+            const Text = document.getElementById('pepole')
+            Text.innerText= "I'm fine teacher, and you?"
+        }
+
+        document.getElementById('next').addEventListener('click', function(){
+            const ask = document.getElementById('pepole')
+            ask.innerText = "I am aslo good"
+        })
+
+        document.getElementById('up-btn').addEventListener('click', function(){
+            const inputFild = document.getElementById('text-1')
+            const update = inputFild.value;
+            const p =document.getElementById('upde');
+            p.innerText = update
+        })
+    </script>
+</body>
+</html>

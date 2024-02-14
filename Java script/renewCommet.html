@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renew Comment Event</title>
+</head>
+<body>
+    <div id="text-area">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sunt, reiciendis consectetur et, pariatur dolorum repellat ipsa nobis rem voluptates aliquam molestiae enim veniam excepturi! Dolores voluptates error laborum vitae libero. Dolores repellendus incidunt asperiores ex aliquid nisi at vero pariatur rerum exercitationem. Earum fugit, harum a eveniet quae sunt.</p>
+        <p>Sapiente quas aspernatur illo eligendi, saepe quod laboriosam beatae totam, deserunt possimus iure consequuntur necessitatibus tempora? Perferendis placeat aliquid deserunt libero, delectus quis provident magnam, eum doloremque voluptates minus eligendi at autem? Molestiae, animi? Quia accusantium pariatur sequi corporis ab alias, ad ducimus reiciendis commodi quis unde dolorum similique! Similique.</p>
+        <p>Numquam labore odit molestiae nobis modi! Quas et tempora, ullam eaque cupiditate quaerat sapiente in eum sequi libero repudiandae quibusdam necessitatibus repellat animi doloribus error quae alias iure hic expedita ducimus magnam? Placeat, illo? Dolor eos tempore temporibus iure nisi dolore architecto eveniet, aperiam nesciunt labore odit corrupti animi voluptatem?</p>
+    </div>
+    <div>
+        <textarea name="" id="comment-text" cols="120" rows="5"></textarea>
+        <br>
+        <button id="btn">submit</button>
+    </div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            const commentText = document.getElementById('comment-text');
+            const commentData = commentText.value;
+
+            const commentArea = document.getElementById('text-area')
+            const p = document.createElement('p')
+            p.innerText = commentData
+            commentArea.appendChild(p)
+            commentText.value =''
+        })
+    </script>
+
+</body>
+</html>
